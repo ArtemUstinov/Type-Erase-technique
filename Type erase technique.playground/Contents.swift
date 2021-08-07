@@ -108,3 +108,5 @@ final public class AnyCup<L: LiquidInterface>: CupInterface {
 var coffeeCups = [AnyCup<Coffee>]()
 coffeeCups.append(AnyCup<Coffee>(with: CeramicCup<Coffee>()))
 coffeeCups.append(AnyCup<Coffee>(with: PlasticCup<Coffee>()))
+
+coffeeCups.forEach { $0.fill(with: Coffee(temperature: 60.3)) }
